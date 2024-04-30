@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hq9-rg-X7f">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ADi-D2-ldB">
+            <objects>
+                <tabBarController id="hq9-rg-X7f" customClass="TabBarController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UWJ-L3-E0O">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bV0-Ee-NJg" kind="relationship" relationship="viewControllers" id="6td-59-f3X"/>
+                        <segue destination="V6Y-qx-dP1" kind="relationship" relationship="viewControllers" id="7ok-7K-yAU"/>
+                        <segue destination="5dY-8O-4nh" kind="relationship" relationship="viewControllers" id="eEb-8r-M5s"/>
+                        <segue destination="1PL-2f-r0g" kind="relationship" relationship="viewControllers" id="etN-Kf-TFa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8a-Yu-Gnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1760" y="-196"/>
+        </scene>
+        <!--Good-->
+        <scene sceneID="0uP-AI-1Ue">
+            <objects>
+                <viewController title="Good" id="bV0-Ee-NJg" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oOa-qh-wZS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why did the chicken cross the road?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHg-S4-3Vy">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="AiG-5n-yo5"/>
+                                    <constraint firstAttribute="width" constant="250" id="WX3-ma-Wqv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m34-6d-WWA">
+                                <rect key="frame" x="285" y="533" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Tre-4R-hnE"/>
+                                    <constraint firstAttribute="width" constant="60" id="WSp-eK-fKI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="transitionPunchline:" destination="bV0-Ee-NJg" eventType="touchUpInside" id="Djs-sv-NYF"/>
+                                    <action selector="transitionPunchline:" destination="V7e-eq-gG6" eventType="touchUpInside" id="HCY-c7-dX5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jar-ei-4xj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jar-ei-4xj" firstAttribute="trailing" secondItem="m34-6d-WWA" secondAttribute="trailing" constant="30" id="Ff1-MQ-2Me"/>
+                            <constraint firstItem="Jar-ei-4xj" firstAttribute="bottom" secondItem="m34-6d-WWA" secondAttribute="bottom" constant="50" id="Lkr-iP-g3K"/>
+                            <constraint firstItem="RHg-S4-3Vy" firstAttribute="centerX" secondItem="oOa-qh-wZS" secondAttribute="centerX" id="S6D-UP-nyV"/>
+                            <constraint firstItem="RHg-S4-3Vy" firstAttribute="centerY" secondItem="oOa-qh-wZS" secondAttribute="centerY" id="ymu-0Q-Jvl"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Good" id="l2T-o8-pWu"/>
+                    <connections>
+                        <outlet property="goodButton" destination="m34-6d-WWA" id="KLH-HG-CiH"/>
+                        <outlet property="goodLabel" destination="RHg-S4-3Vy" id="wLc-pl-AqR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="169-ZK-XnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="V7e-eq-gG6" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-651.14503816793888" y="-825.35211267605644"/>
+        </scene>
+        <!--Pun-->
+        <scene sceneID="i24-V4-C2v">
+            <objects>
+                <viewController title="Pun" id="V6Y-qx-dP1" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mp0-Q3-Pam">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8t-S4-4ql">
+                                <rect key="frame" x="285" y="533" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="crM-nh-t6y"/>
+                                    <constraint firstAttribute="width" constant="60" id="r9E-BT-5e4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="transitionPunchline:" destination="V7e-eq-gG6" eventType="touchUpInside" id="Wkj-kq-Fr3"/>
+                                    <action selector="transitionPunchline:" destination="V6Y-qx-dP1" eventType="touchUpInside" id="mkd-kL-29Z"/>
+                                    <action selector="transitionPunchline:" destination="96N-Cp-wWT" eventType="touchUpInside" id="nmt-BW-CoM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why did the chicken cross the road?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lJ-En-D2n">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="JuF-B7-OGy"/>
+                                    <constraint firstAttribute="height" constant="250" id="P4c-6K-895"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AW0-Oz-J3w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4lJ-En-D2n" firstAttribute="centerY" secondItem="Mp0-Q3-Pam" secondAttribute="centerY" id="Ls3-Ky-EoL"/>
+                            <constraint firstItem="AW0-Oz-J3w" firstAttribute="bottom" secondItem="P8t-S4-4ql" secondAttribute="bottom" constant="50" id="hRw-47-gE1"/>
+                            <constraint firstItem="4lJ-En-D2n" firstAttribute="centerX" secondItem="Mp0-Q3-Pam" secondAttribute="centerX" id="tKl-xk-bEI"/>
+                            <constraint firstItem="AW0-Oz-J3w" firstAttribute="trailing" secondItem="P8t-S4-4ql" secondAttribute="trailing" constant="30" id="zXF-Zp-GjC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pun" id="Iv1-ui-upj"/>
+                    <connections>
+                        <outlet property="punButton" destination="P8t-S4-4ql" id="umL-My-FXB"/>
+                        <outlet property="punLabel" destination="4lJ-En-D2n" id="yPf-uv-oLq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKH-cZ-8cW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="96N-Cp-wWT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-651" y="-143"/>
+        </scene>
+        <!--Dad-->
+        <scene sceneID="dMB-NL-8W5">
+            <objects>
+                <viewController title="Dad" id="5dY-8O-4nh" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vaO-Hj-CJ6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwn-8I-EVT">
+                                <rect key="frame" x="285" y="533" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bFO-hb-s0P"/>
+                                    <constraint firstAttribute="width" constant="60" id="yAi-FZ-x4q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="transitionPunchline:" destination="5dY-8O-4nh" eventType="touchUpInside" id="HFa-K4-D53"/>
+                                    <action selector="transitionPunchline:" destination="bdc-Um-Llq" eventType="touchUpInside" id="byq-3u-h8Y"/>
+                                    <action selector="transitionPunchline:" destination="V7e-eq-gG6" eventType="touchUpInside" id="eoa-YE-QKu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why did the chicken cross the road?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-Dc-n7l">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Bi8-Wi-icL"/>
+                                    <constraint firstAttribute="width" constant="250" id="Bxf-BG-gdZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Sw-p2-UF3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tt9-Dc-n7l" firstAttribute="centerY" secondItem="vaO-Hj-CJ6" secondAttribute="centerY" id="9P3-2U-x4T"/>
+                            <constraint firstItem="7Sw-p2-UF3" firstAttribute="trailing" secondItem="Hwn-8I-EVT" secondAttribute="trailing" constant="30" id="L6j-EV-a7g"/>
+                            <constraint firstItem="Tt9-Dc-n7l" firstAttribute="centerX" secondItem="vaO-Hj-CJ6" secondAttribute="centerX" id="hgM-Kg-xDM"/>
+                            <constraint firstItem="7Sw-p2-UF3" firstAttribute="bottom" secondItem="Hwn-8I-EVT" secondAttribute="bottom" constant="50" id="tzI-xU-bRe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dad" id="s9u-3l-q3M"/>
+                    <connections>
+                        <outlet property="dadButton" destination="Hwn-8I-EVT" id="lrh-gw-vcC"/>
+                        <outlet property="dadLabel" destination="Tt9-Dc-n7l" id="Ky6-UW-t4z"/>
+                        <outlet property="punLabel" destination="Tt9-Dc-n7l" id="rbn-YV-tD1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHc-sX-Hdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bdc-Um-Llq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="691"/>
+        </scene>
+        <!--Knock Knock-->
+        <scene sceneID="pOo-xJ-BMx">
+            <objects>
+                <viewController title="Knock Knock" id="1PL-2f-r0g" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RkX-U2-EnC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEy-Nq-HAj">
+                                <rect key="frame" x="285" y="533" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="OQI-yH-5Fs"/>
+                                    <constraint firstAttribute="width" constant="60" id="shB-we-HGU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="transitionPunchline:" destination="2zL-Ee-lW8" eventType="touchUpInside" id="CwC-Cq-7Y7"/>
+                                    <action selector="transitionPunchline:" destination="V7e-eq-gG6" eventType="touchUpInside" id="ing-Gp-bJD"/>
+                                    <action selector="transitionPunchline:" destination="1PL-2f-r0g" eventType="touchUpInside" id="uFb-Vg-O5t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why did the chicken cross the road?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1s-WL-3jo">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="QJW-BR-uUP"/>
+                                    <constraint firstAttribute="width" constant="250" id="pRw-re-qFU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g0L-5n-eRh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x1s-WL-3jo" firstAttribute="centerX" secondItem="RkX-U2-EnC" secondAttribute="centerX" id="9Bx-t4-peY"/>
+                            <constraint firstItem="x1s-WL-3jo" firstAttribute="centerY" secondItem="RkX-U2-EnC" secondAttribute="centerY" id="CiT-44-a8J"/>
+                            <constraint firstItem="g0L-5n-eRh" firstAttribute="trailing" secondItem="dEy-Nq-HAj" secondAttribute="trailing" constant="30" id="Tw7-8a-xFJ"/>
+                            <constraint firstItem="g0L-5n-eRh" firstAttribute="bottom" secondItem="dEy-Nq-HAj" secondAttribute="bottom" constant="50" id="dkj-xT-MFK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Knock Knock" id="c7U-ZR-v1E"/>
+                    <connections>
+                        <outlet property="dadButton" destination="dEy-Nq-HAj" id="yOu-bG-703"/>
+                        <outlet property="dadLabel" destination="x1s-WL-3jo" id="HQH-BA-U5Y"/>
+                        <outlet property="kkButton" destination="dEy-Nq-HAj" id="aBL-zJ-G90"/>
+                        <outlet property="kkLabel" destination="x1s-WL-3jo" id="3bR-8Q-6hk"/>
+                        <outlet property="punLabel" destination="x1s-WL-3jo" id="mg8-Hf-opr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dq6-bq-xDz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2zL-Ee-lW8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1686" y="1147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
